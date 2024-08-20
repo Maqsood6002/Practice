@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("button.get-name").click(function(){
+                var name=$("#name").val();
+                alert(name);
+            });
+            $("button.get-comment").click(function(){
+                var comment=$("#comment").val();
+                alert(comment);
+            });
+            $("button.get-city").click(function(){
+                var city=$("#city").val();
+                alert(city);
+            });
+        });
+    </script>
+</head>
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td>Comments:</td>
+                <td><textarea name="comment" id="comment" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td><select name="city" id="city">
+                    <option>Select</option>
+                    <option>London</option>
+                    <option>paris</option>
+                    <option>New york</option></select>
+                </td>
+            </tr>
+        </table>
+        <button type="button" class="get-name">Get Name</button>
+        <button type="button" class="get-comment">Get Comment</button>
+        <button type="button" class="get-city">Get City</button>
+    </form>
+</body>
+</html>

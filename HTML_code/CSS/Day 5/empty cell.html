@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>empty cell</title>
+    <style>
+        table{
+            width: 250px;
+        }
+        table,th,td{
+            border: 1px solid black;
+        }
+        table.show{
+            empty-cells: show;
+        }
+        table.hide{
+            empty-cells: hide;
+        }
+        td{
+            width: 3000%;
+        }
+        th{
+            height: 40px;
+            vertical-align: auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Show</h2>
+    <table class="show">
+        <caption>Auto layout</caption>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>Maqsood</th>
+            <th>Maqsood</th>
+            <th>...</th>
+        </tr>
+        <tr>
+            <th>2</th>
+            <th>Ritish</th>
+            <th>Kumar</th>
+            <th></th>
+        </tr>
+        <h2>Hide</h2>
+    </table><table class="hide">
+        <caption>Auto layout</caption>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>Maqsood</th>
+            <th>Maqsood</th>
+            <th>...</th>
+        </tr>
+        <tr>
+            <th>2</th>
+            <th>Ritish</th>
+            <th>Kumar</th>
+            <th></th>
+        </tr>
+    </table>
+</body>
+</html>

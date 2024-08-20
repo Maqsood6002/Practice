@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="intro" style="color: red; font-size: 20px;">This is paragraph</p>
+    <p>This is another paragraph</p>
+    <script>
+        var elem=document.getElementById("intro");
+        var styles=window.getComputedStyle(elem);
+        document.write(styles.getPropertyValue("color"));
+        document.write(styles.getPropertyValue("font-size"));
+        document.write(styles.getPropertyValue("font-weight"));
+        document.write(styles.getPropertyValue("font-style"));
+    </script>
+</body>
+</html>

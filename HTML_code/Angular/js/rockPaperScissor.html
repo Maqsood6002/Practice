@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-color: rgb(10, 10, 10);
+      }
+      h1{
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-left: 40%;
+      }
+      #game{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 450px;
+        margin-left: 33%;
+        border: 1px solid black;
+        padding: 20px;
+        border-radius: 20px;
+        background-color: blue;
+      }
+      #btn{
+        margin: 5px;
+        margin-left: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+      }
+      button{
+        margin: 5 5px;
+        padding: 10px;
+        color: white;
+        background-color: red;
+        border-radius: 10px;
+        width: 80px;
+      }
+      #result{
+        margin-left: 5%;
+        color: white;
+        justify-content: center;
+        align-items: center;
+      }
+      #result1{
+        font-size: 20px;
+        margin-left: 8%;
+        color: white;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+</head>
+<body>
+    <h1>Rock Paper Scissor Game</h1>
+    <div id="game">
+      <p id="result"></p>
+      <button id="btn" onclick="playGame('rock')">Rock</button>
+      <button id="btn" onclick="playGame('paper')">Paper</button>
+      <button id="btn" onclick="playGame('scissors')">Scissors</button>
+      <p id="result1"></p>
+    </div>
+    <script>
+        let userChoice;
+        let count=0;
+        let count1=0;
+        let count2=0;
+        function playGame(choice){
+          count++;
+          userChoice=choice;
+          let computerChoice=Math.floor(Math.random()*3);
+          let choices=["rock","paper","scissors"];
+          let constchoices=choices[computerChoice];
+          let resultMessage = "";
+          if (userChoice === constchoices) {
+            resultMessage = "It's a tie!";
+          } else if ((userChoice == "rock" && constchoices == "scissors") || (userChoice == "paper" && constchoices == "rock") ||
+            (userChoice == "scissors" && constchoices == "paper")) {
+            resultMessage = "You win!";
+            count1++;
+          } else {
+            resultMessage = "You lose!";
+            count2++;
+          }
+          document.getElementById("result1").textContent=`You chosen ${userChoice}, computer chosen ${constchoices}.`;
+          document.getElementById("result").textContent=`Score=${count1}:${count2}`;
+          if(count<5){
+            playgame(choice);
+          }else{
+            if(count1>count2){
+              document.getElementById("result1").textContent=`You Win. Score=${count1}:${count2}`;
+            }else if(count1<count2){
+              document.getElementById("result1").textContent=`You Lose. Score=${count1}:${count2}`;
+            }else{
+              document.getElementById("result1").textContent=`You Win. Score=${count1}:${count2}`;
+            }
+          }
+        }
+        count=0;
+        count1=0;
+        count2=0;
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pizza Cafe</title>
+</head>
+<body>
+  <h1>Welcome to Pizza Cafe</h1>
+  
+  <h2>Choose your pizza size:</h2>
+  <label>
+    <input type="radio" name="size" value="small"> Small ($8)
+  </label>
+  <label>
+    <input type="radio" name="size" value="medium" checked> Medium ($10)
+  </label>
+  <label>
+    <input type="radio" name="size" value="large"> Large ($12)
+  </label>
+
+  <h2>Select your toppings:</h2>
+  <label>
+    <input type="checkbox" name="topping" value="pepperoni"> Pepperoni (+$1)
+  </label>
+  <label>
+    <input type="checkbox" name="topping" value="mushrooms"> Mushrooms (+$0.5)
+  </label>
+  <label>
+    <input type="checkbox" name="topping" value="onions"> Onions (+$0.5)
+  </label>
+  <label>
+    <input type="checkbox" name="topping" value="olives"> Olives (+$0.5)
+  </label>
+
+  <br><br>
+  <button onclick="calculateTotal()">Calculate Total</button>
+
+  <h2>Total Cost:</h2>
+  <p id="totalCost">$10</p>
+
+  <script>
+    function calculateTotal() {
+      const sizePrices = {
+        small: 8,
+        medium: 10,
+        large: 12
+      };
+
+      const toppingPrices = {
+        pepperoni: 1,
+        mushrooms: 0.5,
+        onions: 0.5,
+        olives: 0.5
+      };
+
+      let total = sizePrices[getSelectedValue("size")];
+
+      const selectedToppings = document.querySelectorAll("input[name='topping']:checked");
+      selectedToppings.forEach(topping => {
+        total += toppingPrices[topping.value];
+      });
+
+      document.getElementById("totalCost").textContent = "$" + total.toFixed(2);
+    }
+
+    function getSelectedValue(name) {
+      const radios = document.querySelectorAll("input[name='" + name + "']");
+      for (const radio of radios) {
+        if (radio.checked) {
+          return radio.value;
+        }
+      }
+      return null;
+    }
+  </script>
+</body>
+</html>

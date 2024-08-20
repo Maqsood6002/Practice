@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body{
+    background-color: rgba(0, 0, 0, 0.74);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.944);
+    align-items: center;
+}
+li{
+    margin: 10px;
+    color: white;
+}
+.brand img{
+    width: 44px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container{
+    width: 70%;
+    background-color: black;
+    min-height: 62vh;
+    color: white;
+    display: flex;
+    margin: 8px auto;
+    border-radius: 15px;
+    padding: 30px;
+    background-image: url('desktop-wallpaper-rahat-fateh-ali-khan-rahat.jpg');
+    background-size: cover;
+}
+
+.bottom{
+    height: 120px;
+    position: sticky;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.songList{
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+.songItem{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+.songItem img{
+    height: 40px;
+    width: 60px;
+    object-fit: cover;
+}
+#myProgressBar{
+    width: 50%;
+    margin: 10PX;
+    cursor: pointer;
+}
+.icons{
+    margin: 5px;
+}
+i{
+    margin: 5PX;
+}
+
+@media only screen and (max-width: 1100px) {
+    body {
+      background-color: red;
+    }
+  }

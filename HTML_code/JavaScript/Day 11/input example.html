@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Example</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Enter your name:</label>
+        <input type="text" id="name" />
+        <button type="button" id="submitButton">Submit</button>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var submitButton = document.getElementById("submitButton");
+            submitButton.addEventListener("click", function() {
+                var nameInput = document.getElementById("name");
+                var userName = nameInput.value;
+                alert("Hello, " + userName + "!");
+            });
+        });
+    </script>
+</body>
+</html>
+In this example, when the user clicks the "Submit" button, the JavaScript code reads the value entered in the input field with the id "name" and displays an alert with a personalized greeting.
+
+Remember that user input handling may need additional validation and error handling to ensure the input is safe and valid for your use case. Always sanitize and validate user input to prevent security vulnerabilities and unexpected behavior in your application.
+
+
+
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z index</title>
+    <style>
+        .container{
+            position: relative;
+        }
+        .box{
+            width: 150px;
+            height: 150px;
+            opacity: 0.9;
+            position: absolute;
+        }
+        .red{
+            background: #ff0000;
+            z-index: 1;
+        }
+        .green{
+            top: 30px;
+            left: 30px;
+            background: #00ff00;
+            z-index: 2;
+        }
+        .blue{
+            top: 60px;
+            left: 60px;
+            background: blue;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <div class="box red"></div>
+            <div class="box green"></div>
+            <div class="box blue"></div>
+    </div>
+</body>
+</html>

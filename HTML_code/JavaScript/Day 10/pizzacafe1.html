@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">
+        <input type="radio" name="size" id="small">Small $8
+    </label>
+    <label for="">
+        <input type="radio" name="size" id="medium" checked>Medium $10
+    </label>
+    <label for="">
+        <input type="radio" name="size" id="large">Large $12
+    </label>
+    <label for="">
+        <input type="checkbox" name="topping" id="papparoni">papparoni $1
+    </label>
+    <label for="">
+        <input type="checkbox" name="topping" id="mushrooms">Mushrooms $3
+    </label>
+    <label for="">
+        <input type="checkbox" name="topping" id="onions">onions $2
+    </label>
+    <label for="">
+        <input type="checkbox" name="topping" id="capsicum">capsicum $2
+    </label>
+    <br>
+    <br>
+    <button onclick="calculatetotal()">Calculate Total</button>
+    <p>Total:</p>
+    <p id="results"></p>
+    <script>
+        function calculatetotal(){
+            const sizePrices={
+                small: 8,
+                medium: 10,
+                large: 12
+            }
+            const toppingPrices={
+                papparoni: 1,
+                mushrooms: 3,
+                onions: 2,
+                capsicum: 2
+            }
+            let total=sizePrices[getSelectedValue("size")];
+            const selectedToppings=document.querySelectorAll("input[name='topping']:checked");
+            selectedToppings.forEach(topping=>{
+                total+=toppingPrices[topping.value];
+            });
+            document.getElementById("results").textContent="$"+total.toFixed(2);
+        }
+        function getSelectedValue(name){
+            const radios=document.querySelectorAll("input[name='"+name+"']");
+            for(const radio of radios){
+                if(radio.checked)
+                return radio.value;
+            }
+            return null;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form id="Registration">
+        <label for="username">User Name:</label>
+        <input type="text" name="username" id="username" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+        <button type="button" onclick="registeryser()">Register</button>
+        <button type="button" onclick="printuser()">Print Users</button>
+    </form>
+    <h2>Resgistered Users</h2>
+    <div id="userlist">
+        <script>
+            var usernames=[];
+            var emails=[];
+            var passwords=[];
+            function registeryser(){
+                var username=document.getElementById("username").value;
+                var email=document.getElementById("email").value;
+                var password=document.getElementById("password").value;
+                usernames.push(username);
+                emails.push(email);
+                passwords.push(password);
+                console.log("User Registered:",username,email,password);
+                document.getElementById("Registration Form").reset();
+            }
+            function printuser(){
+                var userlist=document.getElementById("userlist");
+                userlist.innerHTML="";
+                for(var i=0;i<usernames.length;i++){
+                    var userdiv=document.createElement("div");
+                    userdiv.textContent="User Name:"+usernames[i]+",Email:"+emails[i]+",Password:"+passwords[i];
+                    userlist.appendChild(userdiv);
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

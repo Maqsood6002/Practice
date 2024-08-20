@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Selected Products</title>
+</head>
+<body>
+    <!-- ---------NAVIGATION BAR-------- -->
+    <div class="topnav">
+        <!-- ... Navigation bar content ... -->
+    </div>
+    <!-- ---------NAVIGATION BAR-------- -->
+
+    <!-- Selected products section -->
+    <section>
+        <div class="selected-products">
+            <h1>Your Selected Products</h1>
+            <ul id="selected-products-list"></ul>
+        </div>
+
+        <script>
+            // Replace this sample data with your actual data
+            var selectedProducts = [
+                { name: "Bishop Sleeved Printed Crop Top", price: 390 },
+                { name: "Puff Sleeved Solid Wrap Dress", price: 549 }
+                // Add more products as needed
+            ];
+
+            var selectedProductsList = document.getElementById("selected-products-list");
+
+            selectedProducts.forEach(function(product) {
+                var listItem = document.createElement("li");
+                listItem.textContent = product.name + " - $" + product.price.toFixed(2);
+                selectedProductsList.appendChild(listItem);
+            });
+        </script>
+    </section>
+</body>
+</html>

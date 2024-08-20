@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".btn-one").click(function(){
+                $("p").text("This is demo text");
+            });
+            $(".btn-two").click(function(){
+                $("p:first").text("This is second demo text");
+            });
+            $(".btn-three").click(function(){
+                $("p.extra").text("This is third demo text");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button type="button" class="btn-one">Get all paragraph</button>
+    <button type="button" class="btn-two">Get first paragraph</button>
+    <button type="button" class="btn-three">Get extra paragraph</button>
+    <p>This is paragraph</p>
+    <p class="extra">This is another paragraph</p>
+</body>
+</html>

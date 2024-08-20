@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="intro">This is paragraph</p>
+    <p>This is another paragraph</p>
+    <button type="button" onclick="setstyle()">Set intro paragraph style</button>
+    <script>
+        function setstyle(){
+            var elem=document.getElementById("intro")
+            elem.style.color="blue";
+            elem.style.fontSize="18px";
+            elem.style.fontWeight="bold";
+        }
+    </script>
+</body>
+</html>

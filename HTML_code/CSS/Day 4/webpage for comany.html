@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT company</title>
+    <style>
+        .top{
+            padding-top: 25px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-size: 40px;
+            height: 70px;
+        }
+        .middle{
+            padding: 25px;
+            text-align: center;
+            font-size: 25px;
+        }
+        .low{
+            font-size: 40px;
+            max-width: 400px;
+            padding: 20px;
+            margin: auto;
+            border: 1px solid black;
+        }
+        .low input[type="text"],
+        .low input[type="password"]{
+            width: 90%;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        .low input[type="submit"]{
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        footer{
+            width: 100%;
+            margin: 120px;
+            margin-left: 0%;
+            text-align: center;
+            background-color: black;
+            color: white;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">Your IT Company</div>
+    <div id="main">
+        <form action="">
+        <div class="middle"><h1>Welome to your IT company</h1></div>
+        <div class="low">
+                <label for="user_name">User Name:</label><br>
+                <input type="text" id="user_name" name="user_name" required><br>
+                <label for="Password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br>
+                <label for="login"></label><br>
+                <input type="submit" id="login" name="login" required>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2023 Company Name. All rights reserved</p>
+    </footer>
+</body>
+</html>

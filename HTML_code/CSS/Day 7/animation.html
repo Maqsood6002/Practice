@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+            transition: width 2s, height 4s;
+            transition-delay: 1s;
+            animation-name: animate;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        div:hover{
+            width: 300px;
+            height: 300px;
+        }
+        @keyframes animate{
+            from{background-color: red;}
+            to{background-color: aqua;}
+        }
+    </style>
+</head>
+<body>
+    <h1>Transition property</h1>
+    <div></div>
+</body>
+</html>

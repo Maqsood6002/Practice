@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caption</title>
+    <style>
+        table{
+            width: 1000px;
+            border-collapse: collapse;
+        }
+        table,th,td{
+            border: 1px solid black;
+        }
+        th,td{
+            padding: 10px;
+        }
+        table.Secondary caption{
+            caption-side: bottom;
+        }
+    </style>
+</head>
+<body>
+    <h2>Table with Caption at the bottom</h2>
+    <table>
+        <caption>User Info</caption>
+        <tr>
+            <th>NO:</th>
+            <th>Name:</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Clarke</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Peter</td>
+            <td>20</td>
+        </tr>
+    </table>
+    <h2>Table with caption at bottom</h2>
+    <table class="Secondary">
+        <caption>User Info</caption>
+        <tr>
+            <th>NO:</th>
+            <th>Name:</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Clarke</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Peter</td>
+            <td>20</td>
+        </tr>
+    </table>
+</body>
+</html>

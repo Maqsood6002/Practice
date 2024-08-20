@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Counter</title>
+    <script>
+        function ClickCounter(){
+            if(typeof(Storage)!=="undefined"){
+                if(sessionStorage.ClickCount){
+                    sessionStorage.ClickCount=Number(sessionStorage.ClickCount)+1;
+                }
+                else{
+                    sessionStorage.ClickCount=1;
+                }
+            document.getElementById("result").innerHTML="You have clicked the button"+sessionStorage.ClickCount+"time(s) in this session.";
+            }
+            else{
+            document.getElementById("result").innerHTML="Sorry, your browser does not support web storage";
+            }    
+        }
+        function resetcounter(){
+            if(sessionStorage.ClickCount!=1){
+                sessionStorage.ClickCount=0;
+            }
+            document.getElementById("result").innerHTML="You have clicked the button"+sessionStorage.ClickCount+"time(s) in this session.";
+        }
+    </script>
+</head>
+<body>
+    <h2>Click Counter</h2>
+    <p><button onclick="ClickCounter()" type="button" >Click Me</button></p>
+    <div id="result"></div>
+    <p>click the button to see counter increase</p>
+    <p>Close the browser tab or window to reset the counter</p>
+    <p><button onclick="resetcounter()" type="button">reset</button></p>
+    <div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                var newHeading = "<h1>Important Note:</h1>";
+                var newParagraph = document.createElement("p");
+                newParagraph.innerHTML  = "<em>Lorem Ipsum dolor is dummy text...</em>"
+                var newImage = $('<img src="image1.jpg">');
+                $("body").append(newHeading, newParagraph, newImage);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button type="button">Insert contents</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda obcaecati maxime praesentium quia ad voluptates, error, hic dolor ipsa maiores quod. Culpa illum atque, fugit, excepturi sequi vitae accusantium rem, unde hic et asperiores eligendi.</p>
+    <img src="image1.jpg">
+</body>
+</html> 

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <h1 id="title">Hello World</h1>
+        <p id="hint">This is paragraph</p>
+    </div>
+    <button type="button" onclick="insertelement()">insrt element</button>
+    <script>
+        function insertelement(){
+            var newdiv=document.createElement("div");
+            var newcontent=document.createTextNode("Hi, How are you");
+            newdiv.appendChild(newcontent);
+            var currentdiv=document.getElementById("main");
+            document.body.appendChild(newdiv,currentdiv);
+        }
+    </script>
+</body>
+</html>

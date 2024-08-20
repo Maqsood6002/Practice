@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zebra stripe in table</title>
+    <style>
+        table{
+            width: 400px;
+            text-align: left;
+            border-collapse: collapse;
+        }
+        th,td{
+            padding: 10px;
+        }
+        tbody tr:nth-child(odd){
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>1</td>
+            <td>Maqsood</td>
+            <td>Maqsood</td>
+            <td>...</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Mony</td>
+            <td>Goyal</td>
+            <td>...</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Ritish</td>
+            <td>Kumar</td>
+            <td>...</td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

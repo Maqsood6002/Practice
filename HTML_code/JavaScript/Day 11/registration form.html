@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form id="registrationForm">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+        </div>
+        <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" required>
+        </div>
+        <div class="error" id="passwordError"></div>
+        <button type="button" id="registerButton">Register</button>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var registerButton = document.getElementById("registerButton");
+            var passwordInput = document.getElementById("password");
+            var confirmPasswordInput = document.getElementById("confirmPassword");
+            var passwordError = document.getElementById("passwordError");
+
+            registerButton.addEventListener("click", function() {
+                var password = passwordInput.value;
+                var confirmPassword = confirmPasswordInput.value;
+
+                if (password !== confirmPassword) {
+                    passwordError.textContent = "Passwords do not match";
+                } else {
+                    passwordError.textContent = "";
+                    alert("Registration successful!");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

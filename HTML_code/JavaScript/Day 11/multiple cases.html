@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var d=new Date();
+        switch(d.getDate()){
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:document.write("Working days");
+            break;
+            case 0:
+            case 6:document.write("Weekend");
+            break;
+            default:document.write("Day doesnt exist");
+            break;
+        }
+    </script>
+</body>
+</html>

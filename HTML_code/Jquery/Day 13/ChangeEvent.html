@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("select").change(function() {
+                var selectedOption = $(this).find(":selected").val();
+                alert("You have selected - " + selectedOption);
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <label>City:</label>
+        <select>
+            <option>London</option>
+            <option>Paris</option>
+            <option>New York</option>
+        </select>
+    </form>
+    <p><strong>Note: </strong>Select any value from the dropdown select and see the result.</p>
+</body>
+</html>

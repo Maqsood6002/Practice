@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+    animation: shakebody linear 6s infinite;
+}
+.sky{
+    height: 100vh;
+    width: 250%;
+    background-image: url(panorama-beautiful-countryside-romania-sunny-260nw-1302294157.webp);
+    background-repeat: repeat-x;
+    background-size: cover;
+    position: absolute;
+    position: absolute;
+    top: -10vh;
+    animation: sceneryMove linear 5s infinite;
+}
+
+
+.track{
+    height: 60vh;
+    width: 800vw;
+    background-image: url(track.png);
+    background-repeat: repeat-x; 
+    position: absolute;
+    top: 92vh;
+    animation: carMove linear 13s infinite;
+
+}
+
+.car{
+    height: 100px;
+    width: 380px;
+    background-image: url(car_body.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+    position: absolute;
+    left: 0vh;
+    bottom:8vh;
+    animation: shake linear .3s infinite;
+    animation: carBodyMove linear 2.5s infinite;
+
+}
+
+
+.wheel1 img{
+    width: 77px;
+    position: absolute;
+    top: 5.5vh;
+    left:5.8vh;
+    animation: wheelRotation linear .16s infinite;
+}
+
+
+.wheel2 img{
+    width: 77px;
+    position: absolute;
+    top: 5.5vh;
+    left: 32vh;
+    animation: wheelRotation linear .16s infinite;
+
+}
+
+@keyframes wheelRotation
+{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes carMove
+{
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+
+@keyframes shake
+{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+@keyframes shakebody
+{
+    0%{
+        transform: translateY(-50px);
+    }
+    50%{
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateY(-50px);
+    }
+}
+@keyframes sceneryMove
+{
+    100%{
+        transform: translateX(-100vw);
+    }
+}
+@keyframes carBodyMove
+{
+    100%{
+        transform: translateX(200vw);
+    }
+}

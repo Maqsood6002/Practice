@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Percentage Calculator</h1>
+    <form id="PercentageForm">
+        <label for="marksobtained">Marks Obtained</label>
+        <input type="number" name="marksobtained" id="marksobtained"><br>
+        <label for="totalmarks">Total Marks</label>
+        <input type="number" name="totalmarks" id="totalmarks"><br>
+        <button type="button" onclick="calculatepercentage()">Calculate Percentage</button>
+        <p id="result"></p>
+        <script>
+            function calculatepercentage(){
+                let marksobtained=document.getElementById("marksobtained").value;
+                let totalmarks=document.getElementById("totalmarks").value;
+                if(isNaN(marksobtained)||isNaN(totalmarks)){
+                    alert("please enter valid marks and total marks");
+                    return;
+                }
+                let Percentage=(marksobtained/totalmarks)*100;
+                document.getElementById("result").innerHTML="percentage:"+Percentage.toFixed(2)+"%";
+            }
+        </script>
+    </form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Subject wise percentage calculator</h1>
+    <form id="percentageform">
+        <label for="subjectcount">Number of Subjects:</label>
+        <input type="number" name="subjectcount" id="subjectcount" min="1" required>
+        <div id="marksinput"></div>
+        <button type="button" onclick="calculatepercentage()">Calculate Percentage</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        function calculatepercentage(){
+            let subjectcount=parseInt(document.getElementById("subjectcount").value);
+            if(isNaN(subjectcount)||subjectcount<=0){
+                alert("please enter valid number of subject");
+                return;
+            }
+            let totalmarks=0;
+            let marksobtained=0;
+            for(let i=1;i<=subjectcount;i++){
+                let marks=parseFloat(document.getElementById("subject"+i).value);
+            }
+            if(isNaN(marks)){
+                alert("Please enter valid marks for subject");
+                return;
+            }
+            totalmarks+=100;
+            obtainedmarks+=marks;
+        }
+        let percentage=(obtainedmarks/totalmarks)*100;
+        document.getElementById("result").textContent="overall percentage"+percentage.toFixed(2)+"%";
+    </script>
+</body>
+</html>

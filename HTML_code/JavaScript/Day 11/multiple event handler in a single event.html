@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" id="mybtn">click me</button>
+    <script>
+        function first(){
+            alert("The first function executd");
+        }
+        function second(){
+            alert("The second function executd");
+        }
+        var btn=document.getElementById("mybtn");
+        btn.onclick=first;
+        btn.onclick=second;
+    </script>
+</body>
+</html>

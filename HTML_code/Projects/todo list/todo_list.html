@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        table{
+            width: 1000px;
+            text-align: left;
+            border-collapse: collapse;
+        }
+        table ,thead,tbody,td{
+            border: 1px solid black;
+            margin-left: 15%;
+        }
+        thead,tbody{
+            padding: 10px;
+        }
+        tr{
+            margin-left: 10%;
+        }
+        h1{
+            text-align: center;
+        }
+        label{
+            margin: 10px;
+            margin-left: 25%;
+        }
+        input{
+            margin: 10px;
+            margin-left: 25%;
+            width: 44%;
+        }
+        textarea{
+            margin: 10px;
+            margin-left: 25%;
+        }
+        button{
+            margin: 10px;
+            margin-left: 25%;
+        }
+    </style>
+    <script>
+        function getAndUpdate() {
+            console.log("Updating List...");
+            tit = document.getElementById('title').value;
+            Discription = document.getElementById('Discription').value;
+            if (localStorage.getItem('itemsJson') == null) {
+                itemJsonArray = [];
+                itemJsonArray.push([tit, Discription]);
+                localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
+            } else {
+                itemJsonArrayStr = localStorage.getItem('itemsJson');
+                itemJsonArray = JSON.parse(itemJsonArrayStr);
+                itemJsonArray.push([tit, Discription]);
+                localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
+            }
+            update();
+        }
+
+        function update() {
+            if (localStorage.getItem('itemsJson') == null) {
+                itemJsonArray = [];
+                localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
+            } else {
+                itemJsonArrayStr = localStorage.getItem('itemsJson');
+                itemJsonArray = JSON.parse(itemJsonArrayStr);
+            }
+            // Populate the table
+            let tableBody = document.getElementById("tableBody");
+            let str = "";
+            itemJsonArray.forEach((element, index) => {
+                str += `<tr>
+                            <th scope="row">${index + 1}</th>
+                            <td>${element[0]}</td>
+                            <td>${element[1]}</td>
+                            <td><button class="btn btn-sm btn-primary" onclick="deleted(${index})">Delete</button></td>
+                        </tr>`;
+            });
+            tableBody.innerHTML = str;
+        }
+
+        add = document.getElementById("add");
+        add.addEventListener("click", getAndUpdate);
+
+        function deleted(itemIndex) {
+            console.log("Delete", itemIndex);
+            itemJsonArrayStr = localStorage.getItem('itemsJson');
+            itemJsonArray = JSON.parse(itemJsonArrayStr);
+            itemJsonArray.splice(itemIndex, 1);
+            localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
+            update();
+        }
+
+        function clearStorage() {
+            if (confirm("Do you really want to clear?")) {
+                console.log('Clearing the storage');
+                localStorage.clear();
+                update();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1><strong>TO-DO List</strong></h1>
+    <label for="item">Item</label><br>
+    <input type="text" name="item" id="item"><br>
+    <label for="Discription">Discription</label><br>
+    <textarea name="Discription" id="Discription" cols="90" rows="5"></textarea><br>
+    <button type="button" id="add">Submit</button><br>
+    <table>
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Item</th>
+                <th>Discription</th>
+            </tr>
+        </thead>
+        <tbody id="tablebody">
+            <tr>
+                <th scope="row">1</th>
+                <td>item</td>
+                <td>description</td>
+                <td><button type="button" id="mybtn1" onclick="deleted()">-</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

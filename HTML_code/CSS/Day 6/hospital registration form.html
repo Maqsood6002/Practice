@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hospital registration form</title>
+    <style>
+        .form{
+            border: 1px solid black;
+            margin-left: 30%;
+            width: 600px;
+            font-size: 25px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        h1{
+            font-size: 50px;
+            text-align: center;
+        }
+        input[type="text"],
+        input[type="email"]{
+            margin: 10px;
+            font-size: 19px;
+            width: 90%;
+            border-radius: 5px;
+            background-color: aqua;
+        }
+        input[type="submit"]{
+            padding: 10px 25px;
+            margin: 10px;
+            background-color: green;
+            color: white;
+            border-radius: 5px;
+        }
+        input[type="date"]{
+            padding: 5px;
+            margin: 10px;
+            border-radius: 5px;
+            background-color: aqua;
+        }
+        textarea{
+            margin: 10px;
+            border-radius: 5px;
+            background-color: aqua;
+        }
+        select{
+            width: 40%;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+    <h1>Hospital Registration Form</h1><br>
+    <div class="form">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="gender">Gender:</label><br>
+        <select name="gender" id="gender" name="gender">
+            <option value="Select">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+        </select><br>
+        <label for="date">Date of birth:</label><br>
+        <input type="date" id="date" name="date" required><br>
+        <label for="address">Address:</label><br>
+        <textarea name="address" id="address" cols="73" rows="5"></textarea><br>
+        <label for="phone_no">Phone No:</label><br>
+        <input type="text" id="phone_no" name="phone_no" required><br>
+        <label for="occuation">Occupation:</label><br>
+        <input type="text" id="Occupation" name="occuation" required><br>
+        <label for="blood_group">Blood Group:</label><br>
+        <input type="text" id="blood_group" name="blood_group" required><br>
+        <label for="emergency_contact">Emergency Contact:</label><br>
+        <input type="text" id="emergency_contact" name="emergency_contact" required><br>
+        <label for="insurance_provider">Insurance Provider:</label><br>
+        <input type="text" id="insurance_provider" name="insurance_provider"><br>
+        <label for="known_allergies">Known Allergies:</label><br>
+        <input type="text" id="known_allergies" name="known_allergies"><br>
+        <label for="madical_history">Medical History:</label><br>
+        <textarea name="madical_history" id="madical_history" cols="73" rows="5"></textarea><br>
+        <input type="checkbox" required><label for="check">I agree to terms and conditions</label><br>
+        <input type="submit" id="submit" name="submit">
+    </div>
+    </form>
+</body>
+</html>

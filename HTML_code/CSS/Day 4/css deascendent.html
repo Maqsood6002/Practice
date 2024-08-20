@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Descendent</title>
+    <style>
+        h1 em{
+            color: aqua;
+        }
+        ul.menu{
+            padding: 0;
+            list-style: none;
+        }
+        ul.menu li{
+            display: inline;
+        }
+        ul.menu a{
+            margin: 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is <em>heading</em></h1>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</body>
+</html>

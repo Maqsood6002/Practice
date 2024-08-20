@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Our Products</title>
+   <link rel="stylesheet" href="/public/css/products.css">
+   <script>
+    var addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+    addToCartButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            var productId = this.getAttribute("data-product-id");
+            var productPrice = parseFloat(this.getAttribute("data-price"));
+
+            // Send AJAX request to add the product to the cart
+            // Implement the AJAX call here using XMLHttpRequest or fetch API
+            // Example: sendAddToCartRequest(productId, productPrice);
+        });
+    });
+</script>
+</head>
+
+<body><br><br>
+    
+    <!-- ---------NAVIGATION BAR-------- -->
+    <div class="topnav">
+        <div class="logo">
+            <img src="/public/images/index-products/logo2.png" alt="">
+        </div>
+        <div class="categories">
+         <a  href="/views/index.html">Home</a>
+         <a class="active" href="/views/products.html">Products</a>
+         <!-- <a href="categories.html">Categories</a> -->
+         <a href="/views/contact-us.html">ContactUs</a>
+        </div>
+        <div class="profile">
+         <a href="search"><i class="fa-solid fa-magnifying-glass"></i></a>
+         <a href="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+         <a href="/views/login.html"><i class="fa-solid fa-user"></i></a>
+        </div>
+       </div>
+    <!-- ---------NAVIGATION BAR-------- -->
+    <!--products-->
+    <section>
+        <div class="products" id="products">
+            <h2 class="heading">Everyone Has A Style Statment</h2><br>
+            <h1 class="heading1">FIND YOURS HERE!</h1><br>
+            <!--slide-->
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80"
+                        alt="Image 1">
+                    <img src="https://fashionunited.com/cdn-cgi/image/fit=cover,format=auto,gravity=center,height=926,quality=70,width=1388/https://fashionunited.com/img/upload/2022/09/06/dpxfguk-1-2-ug85b1mx-2022-09-06.png"
+                        alt="Image 2">
+                    <img src="https://www.usmagazine.com/wp-content/uploads/2023/06/shutterstock_1522401311-1.jpg?crop=0px%2C170px%2C5445px%2C3079px&resize=1600%2C900&quality=86&strip=all"
+                        alt="Image 3">
+                    <img src="https://brandyourshoes.com/template/bys/files/images/home/slider_home/web_pc_accenture.jpg"
+                        alt="image 4">
+                    <img src="https://editorialist.com/wp-content/uploads/2022/12/Editorialist2023_Beauty_UBestLuxuryMakupBrands_-Hero.jpg"
+                        alt="image 5">
+                    <img src="https://www.arts.gov/sites/default/files/styles/nea_media_large_16x9/public/images/DRUGSTORE%201.jpg?h=fa6f7655&itok=5WjXBeEu"
+                        alt="image 6">
+                </div>
+                <script>
+                    const slider = document.querySelector('.slider');
+                    let currentIndex = 0;
+                    const slideInterval = 3000;
+
+                    function nextSlide() {
+                        currentIndex = (currentIndex + 1) % slider.children.length;
+                        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    }
+
+                    setInterval(nextSlide, slideInterval);
+                </script>
+            </div>
+            <br><br>
+            <br><br>
+            <h1 class="heading2"> For Her</h1>
+            <div class="cards">
+                <!--box 1-->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="https://img3.junaroad.com/uiproducts/19124237/zoom_0-1672846961.jpg" alt="image">
+                        <div class="content">
+                            <h3>Bishop Sleeved Printed Crop Top</h3>
+                            <div class="price-details">
+                                <div class="price-label">M.R.P.</div>
+                                <div class="price-value">₹ 390</div>
+                                <div class="price">₹ 899</div>
+                                <div class="offer">72% Off</div>
+                                <button class="add-to-cart" data-product-id="1" data-price="390">Add to Cart</button>
+                            </div>
+                            <a href="">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--box 2-->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="https://img3.junaroad.com/uiproducts/20025995/zoom_0-1689051577.jpg" alt="image">
+                        <div class="content">
+                            <h3>Puff Sleeved Solid Wrap Dress</h3>
+                            <div class="price-details">
+                                <div class="price-label">M.R.P.</div>
+                                <div class="price-value">₹ 549</div>
+                                <div class="price">₹ 1999</div>
+                                <div class="offer">89% Off </div>
+
+                            </div>
+                            <a href="">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--box 3-->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="https://img3.junaroad.com/uiproducts/18307965/zoom_0-1648041783.jpg" alt="image">
+                        <div class="content">
+                            <h3>Bishop-Sleeved Printed Wrap Dress</h3>
+                            <div class="price-details">
+                                <div class="price-label">M.R.P.</div>
+                                <div class="price-value">₹ 527</div>
+                                <div class="price">₹ 2599</div>
+                                <div class="offer">82% Off</div>
+
+                            </div>
+                            <a href="">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--box 4-->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="https://img3.junaroad.com/uiproducts/18736066/zoom_0-1687936939.jpg" alt="image">
+                        <div class="content">
+                            <h3>Pink Floral Printed Maxi Dress</h3>
+                            <div class="price-details">
+                                <div class="price-label">M.R.P.</div>
+                                <div class="price-value">₹ 670</div>
+                                <div class="price">₹ 1099</div>
+                                <div class="offer">79% Off</div>
+
+                            </div>
+                            <a href="">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--box 5-->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="https://img3.junaroad.com/uiproducts/19915339/zoom_0-1685329079.jpg" alt="image">
+                        <div class="content">
+                            <h3>Black Mandarin Neck A-Line Top</h3>
+                            <div class="price-details">
+                                <div class="price-label">M.R.P.</div>
+                                <div class="price-value">₹ 800</div>
+                                <div class="price">₹ 1200</div>
+                                <div class="offer">62% Off</div>
+
+                            </div>
+
+                            <a href="">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--box 6-->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="https://img3.junaroad.com/uiproducts/19971132/zoom_0-1686669436.jpg" alt="image">
+                        <div class="content">
+                            <h3>Foil Print Flared Kurta</h3>
+                            <div class="price-details">
+                                <div class="price-label">M.R.P.</div>
+                                <div class="price-value">₹ 999</div>
+                                <div class="price">₹ 2999</div>
+                                <div class="offer">82% Off</div>
+
+                            </div>
+
+                            <a href="">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--box 7-->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="https://img3.junaroad.com/uiproducts/19598232/zoom_0-1679670658.jpg" alt="image">
+                        <div class="content">
+                            <h3>Gota Work Gold Printed Flared Kurta</h3>
+                            <div class="price-details">
+                                <div class="price-label">M.R.P.</div>
+                                <div class="price-value">₹ 819</div>
+                                <div class="price">₹ 1049</div>
+                                <div class="offer">49% Off</div>
+
+                            </div>
+
+                            <a href="">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--box 8-->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="https://img3.junaroad.com/uiproducts/20031736/zoom_0-1688999416.jpg" alt="image">
+                        <div class="content">
+                            <h3>Red Printed Kurta Pant Set</h3>
+                            <div class="price-details">
+                                <div class="price-label">M.R.P.</div>
+                                <div class="price-value">₹ 799 </div>
+                                <div class="price">₹ 7999 </div>
+                                <div class="offer">90% Off</div>
+
+                            </div>
+
+                            <a href="">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--box 9-->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="https://img3.junaroad.com/uiproducts/19951707/zoom_0-1686113490.jpg" alt="image">
+                        <div class="content">
+                            <h3>Copper Slip On Mule Sandal</h3>
+                            <div class="price-details">
+                                <div class="price-label">M.R.P.</div>
+                                <div class="price-value">₹ 699</div>
+                                <div class="price">₹ 1499</div>
+                                <div class="offer">53% Off</div>
+
+                            </div>
+
+                            <a href="">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--box 10-->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="https://img3.junaroad.com/uiproducts/18369249/zoom_0-1652458596.jpg" alt="image">
+                        <div class="content">
+                            <h3>Blue Synthetic Slip On Sandals</h3>
+                            <div class="price-details">
+                                <div class="price-label">M.R.P.</div>
+                                <div class="price-value">₹ 969</div>
+                                <div class="price">₹ 3899</div>
+                                <div class="offer">75% Off</div>
+
+                            </div>
+
+                            <a href="">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--box 11-->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="https://img3.junaroad.com/uiproducts/19414997/zoom_0-1677137224.jpg" alt="image">
+                        <div class="content">
+                            <h3>Multi Colored Slip On Pump</h3>
+                            <div class="price-details">
+                                <div class="price-label">M.R.P.</div>
+                                <div class="price-value">₹ 1400</div>
+                                <div class="price">₹ 2400</div>
+                                <div class="offer">50% Off</div>
+
+                            </div>
+
+                            <a href="">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--box 12-->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="https://img3.junaroad.com/uiproducts/19885406/zoom_0-1684842820.jpg" alt="image">
+                        <div class="content">
+                            <h3>Self Design Banarasi Saree With Blouse</h3>
+                            <div class="price-details">
+                                <div class="price-label">M.R.P.</div>
+                                <div class="price-value">₹ 1449</div>
+                                <div class="price">₹ 3999</div>
+                                <div class="offer">89% Off</div>
+
+                            </div>
+                            <a href="">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!--for him-->
+                <!--box 1-->
+                <h1 class="heading3">For Him</h1>
+                <div class="cards for-him">
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="https://img3.junaroad.com/uiproducts/19649026/zoom_0-1680504419.jpg" alt="image">
+                            <div class="content">
+                                <h3>Black Linen Formal Shirt</h3>
+                                <div class="price-details">
+                                    <div class="price-label">M.R.P.</div>
+                                    <div class="price-value">₹ 1159</div>
+                                    <div class="price">₹ 2895</div>
+                                    <div class="offer">60% Off</div>
+
+                                </div>
+                                <a href="">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--box 1-->
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="https://img3.junaroad.com/uiproducts/19995769/zoom_0-1687624893.jpg" alt="image">
+                            <div class="content">
+                                <h3>Mandarin Neck Solid Regular T-Shirt</h3>
+                                <div class="price-details">
+                                    <div class="price-label">M.R.P.</div>
+                                    <div class="price-value">₹ 429</div>
+                                    <div class="price">₹ 1499</div>
+                                    <div class="offer">71% Off</div>
+
+                                </div>
+                                <a href="">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--box 1-->
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="https://img3.junaroad.com/uiproducts/19966198/zoom_0-1686571712.jpg" alt="image">
+                            <div class="content">
+                                <h3>Orange Printed Polo T-Shirt</h3>
+                                <div class="price-details">
+                                    <div class="price-label">M.R.P.</div>
+                                    <div class="price-value">₹ 469</div>
+                                    <div class="price">₹ 1499</div>
+                                    <div class="offer">69% Off</div>
+
+                                </div>
+                                <a href="">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--box 1-->
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="https://img3.junaroad.com/uiproducts/20136479/zoom_0-1691048274.jpg" alt="image">
+                            <div class="content">
+                                <h3>Men Printed Polo T-Shirt</h3>
+                                <div class="price-details">
+                                    <div class="price-label">M.R.P.</div>
+                                    <div class="price-value">₹ 439</div>
+                                    <div class="price">₹ 1499</div>
+                                    <div class="offer">71% Off</div>
+
+                                </div>
+                                <a href="">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--box 1-->
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="https://img3.junaroad.com/uiproducts/17894210/zoom_0-1627733594.jpg" alt="image">
+                            <div class="content">
+                                <h3>Navy Blue Checkered Casual Shirt</h3>
+                                <div class="price-details">
+                                    <div class="price-label">M.R.P.</div>
+                                    <div class="price-value">₹ 599</div>
+                                    <div class="price">₹ 1649</div>
+                                    <div class="offer">64% Off</div>
+
+                                </div>
+                                <a href="">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--box 1-->
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="https://img3.junaroad.com/uiproducts/17855837/zoom_0-1626083057.jpg" alt="image">
+                            <div class="content">
+                                <h3>Green Printed Kurta Pyjama Set</h3>
+                                <div class="price-details">
+                                    <div class="price-label">M.R.P.</div>
+                                    <div class="price-value">₹ 1049</div>
+                                    <div class="price">₹ 2499</div>
+                                    <div class="offer">58% Off</div>
+
+                                </div>
+                                <a href="">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--box 1-->
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="https://img3.junaroad.com/uiproducts/17425446/zoom_0-1607084462.jpg" alt="image">
+                            <div class="content">
+                                <h3>Black Solid Nehru Jacket</h3>
+                                <div class="price-details">
+                                    <div class="price-label">M.R.P.</div>
+                                    <div class="price-value">₹ 1174</div>
+                                    <div class="price">₹ 3999</div>
+                                    <div class="offer">71% Off</div>
+
+                                </div>
+                                <a href="">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--box 1-->
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="https://img3.junaroad.com/uiproducts/16906013/zoom_0-1580734050.jpg" alt="image">
+                            <div class="content">
+                                <h3>Blue Solid Short Kurta</h3>
+                                <div class="price-details">
+                                    <div class="price-label">M.R.P.</div>
+                                    <div class="price-value">₹ 900</div>
+                                    <div class="price">₹ 1699</div>
+                                    <div class="offer">47% Off</div>
+
+                                </div>
+                                <a href="">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="https://img3.junaroad.com/uiproducts/19749176/zoom_0-1682662947.jpg" alt="image">
+                            <div class="content">
+                                <h3>White Pu Lace Up Sneakers</h3>
+                                <div class="price-details">
+                                    <div class="price-label">M.R.P.</div>
+                                    <div class="price-value">₹ 1019</div>
+                                    <div class="price">₹ 1999</div>
+                                    <div class="offer">49% Off</div>
+
+                                </div>
+                                <a href="">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="https://img3.junaroad.com/uiproducts/20070551/zoom_0-1689888081.jpg" alt="image">
+                            <div class="content">
+                                <h3>Color Blocked Lace Up Sneaker</h3>
+                                <div class="price-details">
+                                    <div class="price-label">M.R.P.</div>
+                                    <div class="price-value">₹ 789</div>
+                                    <div class="price">₹ 3499</div>
+                                    <div class="offer">77% Off</div>
+
+                                </div>
+                                <a href="">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="https://img3.junaroad.com/uiproducts/20135456/zoom_0-1691048122.jpg" alt="image">
+                            <div class="content">
+                                <h3>White Lace Up Sport Shoes</h3>
+                                <div class="price-details">
+                                    <div class="price-label">M.R.P.</div>
+                                    <div class="price-value">₹ 749</div>
+                                    <div class="price">₹ 1199</div>
+                                    <div class="offer">38% Off</div>
+
+                                </div>
+                                <a href="">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="https://img3.junaroad.com/uiproducts/19242774/zoom_0-1674894315.jpg" alt="image">
+                            <div class="content">
+                                <h3>Lace Up Sport Shoe</h3>
+                                <div class="price-details">
+                                    <div class="price-label">M.R.P.</div>
+                                    <div class="price-value">₹ 1209</div>
+                                    <div class="price">₹ 1999</div>
+                                    <div class="offer">40% Off</div>
+
+                                </div>
+                                <a href="">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+     <!-- ------------- footer --------  -->
+     <footer>
+
+        <div class="footwrapper">
+            <div class="foot-mega-box">
+                <div class="foot-content">
+                    <div class="foot-row">
+                        <header>WOMEN</header>
+                        <ul class="foot-links">
+                            <li><a href="#">Indian Wear</a></li>
+                            <li><a href="#">Western Wear</a></li>
+                            <li><a href="#">Lingerie & Night Wear</a></li>
+                            <li><a href="#">Footwear</a></li>
+                            <li><a href="#">Watches</a></li>
+                            <li><a href="#">Fragrances</a></li>
+                            <li><a href="#">Bags & Wallets</a></li>
+                            <li><a href="#">Sunglasses & Frames</a></li>
+                            <li><a href="#">Jewellery</a></li>
+                        </ul>
+                    </div>
+                    <div class="foot-row">
+                        <header>MEN</header>
+                        <ul class="foot-links">
+                            <li><a href="#">Clothing</a></li>
+                            <li><a href="#">Footwear</a></li>
+                            <li><a href="#">Watches</a></li>
+                            <li><a href="#">Fragrances</a></li>
+                            <li><a href="#">Grooming For Men</a></li>
+                            <li><a href="#">Sunglasses & Frames</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Jewellery</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="foot-row">
+                        <header>KIDS</header>
+                        <ul class="foot-links">
+                            <li><a href="#">Boys</a></li>
+                            <li><a href="#">Girls</a></li>
+                            <li><a href="#">Infants</a></li>
+                            <li><a href="#">Toys</a></li>
+                            <li><a href="#">School Essential</a></li>
+                            <li><a href="#">Footwear</a></li>
+                            <li><a href="#">Watches</a></li>
+                            <li><a href="#">Accessories</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="foot-row">
+                        <header>BEAUTY</header>
+                        <ul class="foot-links">
+                            <li><a href="#">Make Up</a></li>
+                            <li><a href="#">Skincare</a></li>
+                            <li><a href="#">Bath & Body</a></li>
+                            <li><a href="#">Nails</a></li>
+                            <li><a href="#">Haircare</a></li>
+                            <li><a href="#">Tools & Accessories</a></li>
+                            <li><a href="#">Women's Fragrances</a></li>
+                            <li><a href="#">Men's Fragrances</a></li>
+                            <li><a href="#">Grooming For Men</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="foot-row">
+                        <header>WATCHES</header>
+                        <ul class="foot-links">
+                            <li><a href="#">Mens Watches</a></li>
+                            <li><a href="#">Women Watches</a></li>
+                            <li><a href="#">Kids Watches</a></li>
+                            
+                            
+                        </ul>
+                    </div>
+
+                
+                </div>
+             <p>© 2023 Trend Bazaar Ltd. All rights reserved</p>
+             <p id="Terms">Terms of Use | Cookie & Privacy Policy</p>
+            </div>
+            <div class="icon">
+                <p><i class="fa-brands fa-facebook"></i></p>
+             <p><i class="fa-brands fa-twitter"></i></p>
+             <p><i class="fa-brands fa-instagram"></i></p>
+             <p><i class="fa-brands fa-tiktok"></i></p>
+            </div>
+
+        </div>
+
+
+    </footer>
+    <!-- ------------- footer end--------  -->
+
+</body>
+</html>

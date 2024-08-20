@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            color: red; 
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("form").submit(function(event) {
+                var regex = /^[a-zA-Z] + $/;
+                var currentValue = $("#firstName").val();
+                if(regex.test(currentValue) == false) {
+                    $("#result").html('<p class="error">Not Valid!</p>').show().fadeOut(1000);
+                    //Preventing form submission
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <p><strong>Note: </strong>If try to submit any invalid value. It will produce an error.</p>
+    <forml id="users">
+        <label  for="firstName">First Name:</label>
+        <input type="text" name="first-name" id="firstName">
+        <input type="submit" value="Submit">
+        <div id="result"></div>
+    </form>
+</body>
+</html>

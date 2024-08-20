@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight{
+            background: yellow;
+        }
+        .disabled{
+            background: lightgray;
+            opacity: 0.7;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="info" class="disabled">something very important</div>
+    <script>
+        var elem=document.getElementById("info");
+        elem.classList.add("hide");
+        elem.classList.add("note","highlight");
+        elem.classList.remove("hide");
+        elem.classList.remove("disabled","note");
+        elem.classList.toggle("visible");
+        if(elem.classList.contains("highlight")){
+            alert("The specified class exist on the element");
+        }
+    </script>
+</body>
+</html>

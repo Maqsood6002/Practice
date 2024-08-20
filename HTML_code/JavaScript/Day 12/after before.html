@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div  id="main">
+        <!-- afterbegin  -->
+            <h1 id="title">Hello World</h1>
+            <!-- beforend  -->
+    </div>
+    <!-- afterend  -->
+    <button type="button" onclick="insertContent()">Insert Content</button>
+
+    <script>
+        function insertContent(){
+            // select target element 
+            var mainDiv = document.getElementById("main");
+
+            // insert html just before the element itself,as a previous sibling 
+            mainDiv.insertAdjacentHTML('beforebegin','<p>THis is beforebegin paragraph</p>');
+
+            // insert html just inside the element, before the first child 
+            mainDiv.insertAdjacentHTML('afterbegin','<p>THis is afterbegin paragraph</p>');
+
+            
+            // insert html just inside the element, before the last child 
+            mainDiv.insertAdjacentHTML('beforeend','<p>THis is beforeend paragraph</p>');
+
+             // insert html just inside the element itself as a next sibling 
+             mainDiv.insertAdjacentHTML('afterend','<p>THis is afterend paragraph</p>');
+
+        }
+    </script>
+    
+</body>
+</html>

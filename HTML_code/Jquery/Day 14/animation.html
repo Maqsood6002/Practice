@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            position: relative;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("img").animate({
+                    left:300,
+                    top:300
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button type="button">star button</button>
+    <p>
+    <img src="download (1).jpg" alt="error 404"></p>
+</body>
+</html>

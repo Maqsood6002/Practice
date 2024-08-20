@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Generate a random number between 1 and 100
+const randomNumber = Math.floor(Math.random() * 100) + 1;
+
+// Initialize the number of guesses
+let numberOfGuesses = 0;
+
+// Prompt the user to guess a number
+function guessNumber() {
+    // Increment the number of guesses
+    numberOfGuesses++;
+
+    // Get user input
+    const userGuess = parseInt(prompt("Enter your guess (between 1 and 100):"));
+
+    // Check if the guess is correct
+    if (userGuess === randomNumber) {
+        alert(`Congratulations! You guessed the number ${randomNumber} correctly in ${numberOfGuesses} guesses.`);
+    } else if (userGuess < randomNumber) {
+        alert("Too low! Try a higher number.");
+        guessNumber(); // Recursive call to continue the game
+    } else {
+        alert("Too high! Try a lower number.");
+        guessNumber(); // Recursive call to continue the game
+    }
+}
+
+// Start the game
+guessNumber();
+
+    </script>
+</body>
+</html>

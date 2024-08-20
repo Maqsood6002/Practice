@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            padding: 20px;
+            font: 20px sans-serif;
+            background: khaki;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").click(function() {
+                $(this).slideUp();
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Click on me and I'll disappear</p>
+    <p>Click on me and I'll disappear</p>
+    <p>Click on me and I'll disappear</p>
+</body>
+</html>

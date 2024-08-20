@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Admission{
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-left: 38%;
+            margin-top: 7%;
+            width: 400px;
+            height: auto;
+            font-size: 20px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"]{
+            width: 90%;
+            border-radius: 5px;
+            margin: 5px;
+            font-size: 15px;
+        }
+        h1{
+            text-align: center;
+            font-size: 50px;
+        }
+        input[type="submit"]{
+            background-color: green;
+            border-radius: 5px;
+            color: white;
+            padding: 8px 10px;
+        }
+        ul{
+            margin-top: -0.5%;
+            width: 100%;
+            margin-left: -2%;
+            text-align: right;
+            background-color: black;
+        }
+        ul li{
+            display: inline;
+        }
+        a{
+            color: white;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin: 6%;
+            width: 100%;
+            margin-left: -0.25%;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <nav>
+            <ul>
+                <li><a href="webpage for college.html">Home</a></li>&nbsp;&nbsp;&nbsp;
+            <li><a href="Faculty.html">Faculty</a></li>&nbsp;&nbsp;&nbsp;
+            <li><a href="course.html">Courses</a></li>&nbsp;&nbsp;&nbsp;
+            <li><a href="#admission">Admission</a></li>    &nbsp;&nbsp;&nbsp;
+            <li><a href="about us.html">About Us</a></li>&nbsp;&nbsp;&nbsp;
+            <li><a href="contact us.html">Contact</a></li>&nbsp;&nbsp;
+            </ul>
+        </nav>
+        <h1><strong>Admission Form</strong></h1>
+        <div class="Admission">
+            <br>&nbsp;<label for="first_name">first Name:</label><br>
+            &nbsp;<input type="text" id="first_name" name="first_name" required><br>
+            &nbsp;<label for="last_name">Last Name:</label><br>
+            &nbsp;<input type="text" id="last_name" name="last_name" required><br>
+            &nbsp;<label for="user_name">User Name:</label><br>
+            &nbsp;<input type="text" id="user_name" name="user_name" required><br>
+            &nbsp;<label for="email">Email:</label><br>
+            &nbsp;<input type="email" id="email" name="email" required><br>
+            &nbsp;<label for="password">Password:</label><br>
+            &nbsp;<input type="password" id="password" name="password" required><br><br>
+            &nbsp;<input type="submit" id="submit" name="submit"><br><br>
+        </div>
+    </form>
+    <footer>
+        <p>&copy; 2023 collegename, All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            padding: 20px;
+            font: 20px sans-serif;
+            background: khaki;
+        }
+        p.highlight {
+            background: yellow;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").hover(function() {
+                $(this).addClass("highlight");
+            }, function(){
+                $(this).removeClass("highlight");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Place mouse pointer on me</p>
+    <p>Place mouse pointer on me</p>
+    <p>Place mouse pointer on me</p>
+</body>
+</html>

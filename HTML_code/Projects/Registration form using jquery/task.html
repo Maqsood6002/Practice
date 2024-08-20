@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery executing a function on change event</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js">
+    </script>
+    <style>
+        .error{
+            color: red;
+            margin-left: 560px;
+            margin-top: -80px;
+            font-size: large;
+        }
+        form{
+            margin: 100px 550px;
+            max-width: 400px;
+            border: 1px solid black;
+            align-items: center;
+            border-radius: 2%;
+            background-color: #f9ffff;
+            box-shadow: 4px 2px 0 rgba(0, 0, 0, 0.1);
+        }
+        form label{
+            display: block;
+            margin: 10px 10px 0;
+            font-size: large;
+        }
+        #firstname,#lastname,#email,#password{
+            margin: 5px 10px;
+            width: 84%;
+            padding: 5px;
+        }
+        #submit{
+            background-color: #11dd55;
+            margin: 15px 10px;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+        #submit:hover{
+            background-color: #44ff77;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("form").submit(function(event){
+                var regex = /^[a-zA-Z]+$/;
+                var currentValue1 = $("#firstname").val();
+                if(regex.test(currentValue1) == false){
+                    $("#result").html('<p class="error">Not Valid!</p>').show().fadeOut(1000);
+                    event.preventDefault();
+                }
+
+                var currentValue2 = $("#lastname").val();
+                if(regex.test(currentValue2) == false){
+                    $("#result").html('<p class="error">Not Valid!</p>').show().fadeOut(1000);
+                    event.preventDefault();
+                }
+
+                currentValue3 = $("#email").val();
+                if(currentValue3 == ""){
+                    $("#result").html('<p class="error">Not Valid!</p>').show().fadeOut(1000);
+                    event.preventDefault();
+                }
+
+                currentvalue4 = $("#password").val();
+                if(currentvalue4 == ""){
+                    $("#result").html('<p class="error">Not Valid!</p>').show().fadeOut(1000);
+                    event.preventDefault();
+                }
+                if(currentvalue4.length < 6){
+                    $("#result").html('<p class="error">Not Valid!</p>').show().fadeOut(1000);
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="users">
+
+        <label for="firstName">First Name: </label>
+        <input type="text" name="first-name" id="firstname">
+
+        <label for="lastName">Last Name: </label>
+        <input type="text" name="last-name" id="lastname">
+
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email">
+
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password">
+
+        <input type="submit" value="submit" id="submit">
+
+    </form>
+    <div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Webpage</title>
+    <style>
+        .head{
+            background-color: black;
+            color: white;
+            margin-left: -8px;
+            margin-top: -35px;
+        }
+        h1{
+            font-style: oblique;
+            font-size: 50px;
+        }
+        a{
+            color: white;
+            font-size: 15px;
+            padding: 5px;
+        }
+        ul{
+            text-align: right;
+        }
+        ul li{
+            display: inline;
+        }
+        a:visited{
+            color: aliceblue;
+        }
+        .mid{
+            text-align: center;
+        }
+        h2{
+            font-size: 70px;
+        }
+        .middle{
+            text-align: left;
+            padding: 5px;
+            border-radius: 5px;
+            border: 2px solid black;
+            width: 400px;
+            height: 250px;
+            font-size: 25px;
+            margin-left: 36%;
+            padding: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"]{
+            width: 90%;
+            padding: 8px;
+            border: 2px solid black;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        input[type="submit"]{
+            background-color: green;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin: 3%;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin: 9%;
+            width: 100%;
+            margin-left: -0.25%;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+        <h1>&nbsp;&nbsp;&nbsp;&nbsp;College Name</h1>
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>&nbsp;&nbsp;&nbsp;
+            <li><a href="Faculty.html">Faculty</a></li>&nbsp;&nbsp;&nbsp;
+            <li><a href="course.html">Courses</a></li>&nbsp;&nbsp;&nbsp;
+            <li><a href="admission.html">Admission</a></li>    &nbsp;&nbsp;&nbsp;
+            <li><a href="about us.html">About Us</a></li>&nbsp;&nbsp;&nbsp;
+            <li><a href="contact us.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="mid">
+        <h2>Login</h2>
+        <div class="middle">
+            <section id="Home">
+            &nbsp;<label for="user_name">User Name:</label><br>
+            &nbsp;<input type="text" id="user_name" name="user_name" required><br>
+            &nbsp;<label for="email">Email:</label><br>
+            &nbsp;<input type="email" id="email" name="email" required><br>
+            &nbsp;<label for="password">Password:</label><br>
+            &nbsp;<input type="password" id="password" name="password" required><br>
+            &nbsp;<input type="submit" id="submit" name="submit">
+        </section>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 collegename, All rights reserved.</p>
+    </footer>
+</body>
+</html>

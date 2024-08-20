@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".out-btn").click(function(){
+                $("p").fadeOut("slow",function(){
+                    alert("The fade out effect is complete");
+                });
+            });
+            $(".in-btn").click(function(){
+                $("p").fadeIn("slow",function(){
+                    alert("The fade in effect is complete");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <button type="button" class="out-btn">Fade out button</button>
+    <button type="button" class="in-btn">Fade in button</button>
+    <p>This is paragraph<br>This is another paragraph</p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            display: block;
+            margin: 5px 0; 
+        }
+        label span {
+            display: none;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("input").focus(function() {
+                $(this).next("span").show().fadeOut("slow");
+            });
+        });
+    </script>
+</head>
+<body>
+    <form>
+        <label>Email: <input type="text"><span>Focus fire</span></label>
+        <label>Password: <input type="password"><span>Focus fire</span></label>
+        <label><input type="submit" value="sigh in"><span>Focus fire</span></label>
+    </form>
+    <p><strong>Note: </strong>Click on the form control or press the "Tab" key to set focus.</p>
+</body>
+</html>

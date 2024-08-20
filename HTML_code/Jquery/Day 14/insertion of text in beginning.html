@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("p").prepend('<a href="#">read more...</a>');
+            $("button").click(function(){
+                $("#container").prepend("this is demo text");
+            });
+        });
+    </script>
+</head>
+<body>
+    <button type="button">Insert text</button>
+    <div id="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim impedit repudiandae corporis blanditiis officiis quis maiores, laborum cumque quas, odio magni necessitatibus, sapiente non expedita aut fugiat dignissimos? Facilis deleniti cupiditate repellat! Laboriosam, impedit doloribus aliquid officia fugiat eveniet nihil. Facilis at ut dolorum obcaecati ipsum ad quod necessitatibus accusamus.</p>
+    </div>
+</body>
+</html>
